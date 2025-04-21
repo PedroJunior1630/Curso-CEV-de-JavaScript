@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCALIDADE</title>
+</head>
+<body>
+    <h1>Registro de localidade</h1>
+    Qual país você mora? <input type="text" name="textpais" id="txtpais">
+    <input type="button" value="Verifica" onclick="verificapais()">
+    <div id="res"></div>
+    <script>
+        function verificapais(){
+            var res = document.getElementById('res');
+            var pais = document.getElementById('txtpais');
+            res.innerHTML = `<p>Seu país é ${pais.value}</p>`;
+            if(pais.value == 'Brasil'){
+                res.innerHTML += "Você é Brasileiro";
+            }else{
+                res.innerHTML += "Você é Estrangeiro";
+            }
+        }
+    </script>
+</body>
+</html> 
